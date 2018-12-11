@@ -1,7 +1,7 @@
 #ifndef __PARSER_H__
 #define __PARSER_H__
 
-#include "Monster.h"
+#include <stdint.h>
 
 typedef enum JSONObjectType {
 	eJSONObjectTypeNone,
