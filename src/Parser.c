@@ -38,7 +38,7 @@ static char* strcopy( const char* string ){
 
 static uint16_t tokenize( FILE* file, char*** return_value ){
 	fseek( file, 0L, SEEK_END );
-	char buffer[ ftell( file ) + 1 ];
+	char* buffer = (char*)malloc( ftell( file ) + 1 );
 	fseek( file, 0L, SEEK_SET );
 	readFile( buffer, file );
 
@@ -100,6 +100,7 @@ static uint16_t tokenize( FILE* file, char*** return_value ){
 		}
 	}
 
+	free( buffer );
 	return index;
 }
 
