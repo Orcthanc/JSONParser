@@ -1,6 +1,10 @@
 #ifndef __PARSER_H__
 #define __PARSER_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif //__cplusplus
+
 #include <stdint.h>
 
 typedef enum JSONObjectType {
@@ -36,4 +40,8 @@ typedef struct JSONObjectString {
 JSONObjectDictionary* parse( const char* path );
 void jsonify( char* path, JSONObjectDictionary* dict );
 
-#endif
+#ifdef __cplusplus
+}
+#endif //__cplusplus
+
+#endif //__PARSER_H__
