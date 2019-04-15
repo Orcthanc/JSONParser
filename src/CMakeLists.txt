@@ -6,6 +6,6 @@ file(GLOB_RECURSE JSONParser_SOURCES "*.c")
 
 add_library( JSONParserLib ${JSONParser_SOURCES} )
 
-target_include_directories( JSONParserLib PUBLIC "." )
+target_include_directories( JSONParserLib PUBLIC ${PROJECT_SOURCE_DIR} )
 set_property(TARGET JSONParserLib PROPERTY C_STANDARD 99)
 
